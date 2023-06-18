@@ -1,0 +1,12 @@
+---
+- hosts: group2
+  tasks:
+    - name: install_git
+      apt:
+        name: git
+        state: present
+    - name: copy_file
+      copy:
+        src: /root/.ssh/1.yml
+        dest: /home/ubuntu
+
